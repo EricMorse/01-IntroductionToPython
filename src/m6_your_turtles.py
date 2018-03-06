@@ -2,10 +2,10 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Eric Morse.
 """
 ###############################################################################
-# TODO: 1.
+# DONE: 1.
 #   On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ###############################################################################
 
@@ -27,3 +27,29 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #
 #   Don't forget to COMMIT-and-PUSH when you are done with this module.
 ###############################################################################
+import rosegraphics as rg
+
+window = rg.TurtleWindow()
+window.delay(20)  # Bigger numbers mean slower animation.
+
+red_turtle = rg.SimpleTurtle('turtle')
+red_turtle.pen = rg.Pen('red', 3)
+red_turtle.speed = 30
+blue_turtle = rg.SimpleTurtle('turtle')
+blue_turtle.pen = rg.Pen('blue', 3)
+blue_turtle.speed = 20
+for k in range (10):
+    blue_turtle.left(90)
+    red_turtle.forward(20*k)
+    blue_turtle.forward(20*k)
+    red_turtle.left(90)
+    red_turtle.pen_up()
+    blue_turtle.pen_up()
+    blue_turtle.left(90)
+    red_turtle.forward(20*k)
+    blue_turtle.forward(20*k)
+    red_turtle.left(90)
+    red_turtle.pen_down()
+    blue_turtle.pen_down()
+
+window.close_on_mouse_click()
