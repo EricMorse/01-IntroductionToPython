@@ -30,7 +30,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 import rosegraphics as rg
 
 window = rg.TurtleWindow()
-window.delay(20)  # Bigger numbers mean slower animation.
+window.delay(20)  
 
 red_turtle = rg.SimpleTurtle('turtle')
 red_turtle.pen = rg.Pen('red', 3)
